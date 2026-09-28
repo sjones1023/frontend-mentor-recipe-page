@@ -8,6 +8,7 @@
     --c-rose800: hsl(332, 51%, 32%);
     --c-rose50: hsl(330, 100%, 98%);
 
+    --c-bg: var(--c-stone100);
     --c-headingtext: var(--c-rose800);
     --c-divider: var(--c-stone100);
 
@@ -39,7 +40,7 @@
 body {
     font-family: Outfit, Arial, sans-serif;
     font-size: var(--fs-bodytext);
-    background: var(--c-stone150);
+    background: var(--c-bg);
     margin: 0;
 
     @media (min-width: 768px) {
