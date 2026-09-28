@@ -9,9 +9,11 @@
     --c-rose50: hsl(330, 100%, 98%);
 
     --c-headingtext: var(--c-rose800);
+    --c-divider: var(--c-stone100);
 
     --fs-bodytext: 1rem; /* 16px */
     --fs-heading: calc(1.618 * var(--fs-bodytext))
+
 }
 
 @font-face {
@@ -29,6 +31,7 @@
 
 .attribution { font-size: 0.6875rem; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
 
 body {
     font-family: Outfit, Arial, sans-serif;
@@ -53,7 +56,16 @@ section, header {
     background: var(--c-white);
     display: block;
     flex-direction: column;
-    color: var(--c-stone900);
+    color: var(--c-stone600);
+}
+
+.recipe-section {
+    border-bottom: 1px solid var(--c-divider);
+
+    &:last-child {
+        border: none;
+        margin-block-end: 1em;
+    }
 }
 
 h2 {
@@ -71,8 +83,8 @@ h2 {
     padding-inline: 1rem;
     padding-block: .2em;
 
-    & h1 {
-        font-size: 1.2rem;
+    & h2 {
+        font-size: 1.125rem;
     }
 }
 
@@ -84,6 +96,14 @@ h2 {
     padding-inline-start: 1rem;
 }
 
+#prep_time li::marker {
+    color: var(--c-rose800);
+}
+
+.section-header {
+    font-family: 'Young Serif', sans-serif;
+}
+
 section ul, section ol {
     padding-inline-start: 16px;
     margin-block-end: 1em;
@@ -92,12 +112,37 @@ section ul, section ol {
         padding-inline-start: 16px;
         margin-block-end: 1em;
     }
+
+    & li::marker {
+        color: var(--c-brown800);
+        font-weight: 600;
+    }
 }
 
 img {
     width: 100%;
     height: auto;
 }
+
+table {
+    width: 100%;
+}
+
+td {
+    padding-inline-start: 1em;
+}
+
+td:nth-child(2) {
+    color: var(--c-brown800);
+    font-weight: 700;
+}
+
+td:last-child { border: none; }
+
+table#nutrition-table td{
+    border-block-end: 1px solid var(--c-divider);
+}
+
 
 @media (min-width: 768px) {
     
