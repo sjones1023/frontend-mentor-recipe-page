@@ -32,6 +32,9 @@
 .attribution { font-size: 0.6875rem; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 
 body {
     font-family: Outfit, Arial, sans-serif;
@@ -61,10 +64,11 @@ section, header {
 
 .recipe-section {
     border-bottom: 1px solid var(--c-divider);
+    padding-block: 1em;
 
     &:last-child {
         border: none;
-        margin-block-end: 1em;
+        padding-block-end: 1em;
     }
 }
 
@@ -75,6 +79,7 @@ h2 {
 
 .main-header h1 {
     font-family: 'Young Serif', serif;
+    color: var(--c-stone900);
 }
 
 #prep_time {
@@ -131,6 +136,7 @@ table#nutrition-table {
 
 td {
     padding-inline-start: 1em;
+    padding-block: .5em;
 }
 
 td:nth-child(2) {
@@ -138,12 +144,13 @@ td:nth-child(2) {
     font-weight: 700;
 }
 
-td:last-child { border: none; }
 
 table#nutrition-table td{
     border-block-end: 1px solid var(--c-divider);
+
 }
 
+table#nutrition-table tr:last-child td { border: none; }
 
 @media (min-width: 768px) {
     
